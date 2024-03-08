@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct MealDetailerApp: App {
+    let mdScrollView = MDScrollView()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(mdScrollView: mdScrollView)
         }
     }
 }
