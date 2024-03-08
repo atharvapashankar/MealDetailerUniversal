@@ -52,12 +52,6 @@ struct MealListView: View {
     MealListView(mdMealDetailViewModel: MDMealDetailViewModel(mealId: "52772"))
 }
 
-struct mealDetailView: View {
-    var body: some View {
-        Text("ABCD")
-    }
-}
-
 struct YoutubeVideoView: UIViewRepresentable {
     
     var youtubeVideoID: String
