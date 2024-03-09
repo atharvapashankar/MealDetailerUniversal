@@ -18,10 +18,14 @@
 		2F35E9792B940863001EF0E8 /* MDEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9782B940863001EF0E8 /* MDEngine.swift */; };
 		2F35E97B2B948E4D001EF0E8 /* MDScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E97A2B948E4D001EF0E8 /* MDScrollView.swift */; };
 		2F35E9832B95C3FE001EF0E8 /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9822B95C3FE001EF0E8 /* MealListView.swift */; };
-		2F35E9852B95C982001EF0E8 /* MealListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9842B95C982001EF0E8 /* MealListRow.swift */; };
+		2F35E9852B95C982001EF0E8 /* MDMealListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9842B95C982001EF0E8 /* MDMealListRowView.swift */; };
 		2F35E98B2B999800001EF0E8 /* MDUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E98A2B999800001EF0E8 /* MDUtilities.swift */; };
 		2F35E98E2B99988E001EF0E8 /* MDResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E98D2B99988E001EF0E8 /* MDResponseParser.swift */; };
 		2F35E9902B9B2A87001EF0E8 /* MDMealDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E98F2B9B2A87001EF0E8 /* MDMealDetailViewModel.swift */; };
+		2F35E9922B9C4AC2001EF0E8 /* MDHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9912B9C4AC2001EF0E8 /* MDHomeView.swift */; };
+		2F35E9962B9C4E62001EF0E8 /* MDSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9952B9C4E62001EF0E8 /* MDSettingsView.swift */; };
+		2F35E9982B9C598F001EF0E8 /* MDControlCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9972B9C598F001EF0E8 /* MDControlCenterManager.swift */; };
+		2F35E99A2B9C6304001EF0E8 /* MDMealListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9992B9C6304001EF0E8 /* MDMealListCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,10 +60,14 @@
 		2F35E9782B940863001EF0E8 /* MDEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDEngine.swift; sourceTree = "<group>"; };
 		2F35E97A2B948E4D001EF0E8 /* MDScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDScrollView.swift; sourceTree = "<group>"; };
 		2F35E9822B95C3FE001EF0E8 /* MealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
-		2F35E9842B95C982001EF0E8 /* MealListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListRow.swift; sourceTree = "<group>"; };
+		2F35E9842B95C982001EF0E8 /* MDMealListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMealListRowView.swift; sourceTree = "<group>"; };
 		2F35E98A2B999800001EF0E8 /* MDUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDUtilities.swift; sourceTree = "<group>"; };
 		2F35E98D2B99988E001EF0E8 /* MDResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDResponseParser.swift; sourceTree = "<group>"; };
 		2F35E98F2B9B2A87001EF0E8 /* MDMealDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMealDetailViewModel.swift; sourceTree = "<group>"; };
+		2F35E9912B9C4AC2001EF0E8 /* MDHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDHomeView.swift; sourceTree = "<group>"; };
+		2F35E9952B9C4E62001EF0E8 /* MDSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDSettingsView.swift; sourceTree = "<group>"; };
+		2F35E9972B9C598F001EF0E8 /* MDControlCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDControlCenterManager.swift; sourceTree = "<group>"; };
+		2F35E9992B9C6304001EF0E8 /* MDMealListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMealListCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +118,11 @@
 		2F03EA8A2B91C02500B42092 /* MealDetailer */ = {
 			isa = PBXGroup;
 			children = (
+				2F03EA8B2B91C02500B42092 /* MealDetailerApp.swift */,
 				2F35E9812B95BE6E001EF0E8 /* View */,
 				2F35E97D2B9492A1001EF0E8 /* Models */,
 				2F35E97C2B949294001EF0E8 /* Network */,
 				2F35E9802B95BE59001EF0E8 /* ViewModel */,
-				2F03EA8B2B91C02500B42092 /* MealDetailerApp.swift */,
 				2F35E98C2B999876001EF0E8 /* Utilities */,
 				2F03EA8F2B91C02800B42092 /* Assets.xcassets */,
 				2F03EA912B91C02800B42092 /* Preview Content */,
@@ -168,6 +176,7 @@
 			children = (
 				2F35E97A2B948E4D001EF0E8 /* MDScrollView.swift */,
 				2F35E98F2B9B2A87001EF0E8 /* MDMealDetailViewModel.swift */,
+				2F35E9972B9C598F001EF0E8 /* MDControlCenterManager.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -177,7 +186,10 @@
 			children = (
 				2F03EA8D2B91C02500B42092 /* ContentView.swift */,
 				2F35E9822B95C3FE001EF0E8 /* MealListView.swift */,
-				2F35E9842B95C982001EF0E8 /* MealListRow.swift */,
+				2F35E9842B95C982001EF0E8 /* MDMealListRowView.swift */,
+				2F35E9912B9C4AC2001EF0E8 /* MDHomeView.swift */,
+				2F35E9952B9C4E62001EF0E8 /* MDSettingsView.swift */,
+				2F35E9992B9C6304001EF0E8 /* MDMealListCardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -321,15 +333,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F35E9962B9C4E62001EF0E8 /* MDSettingsView.swift in Sources */,
+				2F35E9982B9C598F001EF0E8 /* MDControlCenterManager.swift in Sources */,
 				2F35E9792B940863001EF0E8 /* MDEngine.swift in Sources */,
-				2F35E9852B95C982001EF0E8 /* MealListRow.swift in Sources */,
+				2F35E9852B95C982001EF0E8 /* MDMealListRowView.swift in Sources */,
 				2F35E97B2B948E4D001EF0E8 /* MDScrollView.swift in Sources */,
 				2F35E98E2B99988E001EF0E8 /* MDResponseParser.swift in Sources */,
 				2F03EA8E2B91C02500B42092 /* ContentView.swift in Sources */,
 				2F35E9902B9B2A87001EF0E8 /* MDMealDetailViewModel.swift in Sources */,
 				2F03EAB62B91C56F00B42092 /* MDDesertModel.swift in Sources */,
+				2F35E9922B9C4AC2001EF0E8 /* MDHomeView.swift in Sources */,
 				2F35E98B2B999800001EF0E8 /* MDUtilities.swift in Sources */,
 				2F03EA8C2B91C02500B42092 /* MealDetailerApp.swift in Sources */,
+				2F35E99A2B9C6304001EF0E8 /* MDMealListCardView.swift in Sources */,
 				2F35E9832B95C3FE001EF0E8 /* MealListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
