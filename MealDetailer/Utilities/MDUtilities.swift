@@ -9,7 +9,9 @@ import Foundation
 
 class MDUtilities {
     
-    
+    struct Constants {
+        let youtubeTrimLink = "https://www.youtube.com/watch?v="
+    }
 }
 
 extension String {
