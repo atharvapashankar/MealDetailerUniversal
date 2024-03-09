@@ -13,14 +13,19 @@ struct ContentView: View {
     @State private var isShowingDetailView = false
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading) {
-                List(mdScrollView.mealList, id: \.id) { meal in
-                    NavigationLink(destination: MealListView(mdMealDetailViewModel: MDMealDetailViewModel.init(mealId: meal.idMeal)), label: {
-                        MealListRow(meal: meal)
-                    })
-                }.navigationTitle("Menu")
-            }
+        
+        TabView {
+            MDHomeView(mdScrollView: mdScrollView)
+                .tabItem { Label(
+                    title: { Text("Deserts") },
+                    icon: { /*@START_MENU_TOKEN@*/Image(systemName: "42.circle")/*@END_MENU_TOKEN@*/ }
+                ) }
+            
+            MDSettingsView()
+                .tabItem { Label(
+                    title: { Text("Settings") },
+                    icon: { /*@START_MENU_TOKEN@*/Image(systemName: "42.circle")/*@END_MENU_TOKEN@*/ }
+                ) }
         }
     }
 }

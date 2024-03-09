@@ -1,5 +1,5 @@
 //
-//  MealListRow.swift
+//  MDMealListRowView.swift
 //  MealDetailer
 //
 //  Created by Atharva Pashankar on 3/4/24.
@@ -7,7 +7,25 @@
 
 import SwiftUI
 
-struct MealListRow: View {
+struct MDMealListRowView: View {
+    
+    @ObservedObject var mdScrollView : MDScrollView
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            NavigationView{
+                List(mdScrollView.mealList, id: \.id) { meal in
+                    NavigationLink(destination: MealListView(mdMealDetailViewModel: MDMealDetailViewModel.init(mealId: meal.idMeal)), label: {
+                        MDMealRowCard(meal: meal)
+                    })
+                }.navigationTitle("Menu")
+            }
+        }
+    }
+    
+}
+
+struct MDMealRowCard : View {
     let meal: Meal
     
     var body: some View {
@@ -52,5 +70,5 @@ struct MealListRow: View {
 }
 
 #Preview {
-    MealListRow(meal: Meal(strMeal: "akjcnac", strMealThumb: "akjcnac", idMeal: "kajnc"))
+    MDMealListRowView(mdScrollView: MDScrollView())
 }
