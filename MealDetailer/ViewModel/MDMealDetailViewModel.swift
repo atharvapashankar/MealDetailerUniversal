@@ -32,4 +32,13 @@ class MDMealDetailViewModel : ObservableObject {
         guard let mealsModel = mealDetail.first, let meal = mealsModel.meals else { return nil }
         return meal[type.rawValue]
     }
+    
+    func getYoutubeLink() -> String? {
+        guard let mealsModel = mealDetail.first, let meal = mealsModel.meals else { return nil }
+        guard let youtubeLink = meal[MDDynamicMealDetailSanitized.codingKeys.youtube.rawValue] else {return nil}
+        let youtubeTrimLink = "https://www.youtube.com/watch?v="
+        let trim = "embed/"
+        
+        return youtubeLink.replacingOccurrences(of: "watch?v=", with: "embed/")
+    }
 }

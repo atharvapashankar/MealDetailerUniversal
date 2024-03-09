@@ -19,10 +19,6 @@ class MDResponseParser {
         let decoder = JSONDecoder()
         let mealDetails = try? decoder.decode(MDDynamicMealDetail.self, from: data)
         
-        let str = mealDetails?["strMeasure9"]
-        let abcd = mealDetails?.meals
-        let abcde = abcd?.first
-        
         return mealDetails
     }
     

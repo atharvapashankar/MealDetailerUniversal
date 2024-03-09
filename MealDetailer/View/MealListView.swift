@@ -21,7 +21,17 @@ struct MealListView: View {
     }
     
     private var mealDetails: some View {
-        VStack(alignment: .leading, spacing: 5) {
+        VStack(alignment: .leading) {
+            AsyncImage(url: URL(string: mdMealDetailViewModel.getMealName(for: .strMealThumb) ?? "")) { image in
+                image.image?
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+            }
+            .frame(width: UIScreen.main.bounds.width, height: 400, alignment: .top)
+            .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 10)))
+            .shadow(color: .black, radius: 10)
+            
+            
             Text(mdMealDetailViewModel.getMealName(for: .strMealName) ?? "ABCDEF")
                 .font(.headline).lineLimit(1)
             let tags = "99999"
@@ -35,8 +45,10 @@ struct MealListView: View {
                         .background(Color.yellow.opacity(0.2))
                         .cornerRadius(5)
                 }.padding(.leading, 8)
+            if let youtubeUrl = mdMealDetailViewModel.getYoutubeLink() {
+                YoutubeVideoView(url: youtubeUrl).frame(width: UIScreen.main.bounds.width, height: 200)
+            }
             
-            YoutubeVideoView(youtubeVideoID: "asc").frame(width: UIScreen.main.bounds.width, height: 200)
         }
         
     }
@@ -54,7 +66,7 @@ struct MealListView: View {
 
 struct YoutubeVideoView: UIViewRepresentable {
     
-    var youtubeVideoID: String
+    var url: String
     
     func makeUIView(context: Context) -> WKWebView  {
         
@@ -64,7 +76,7 @@ struct YoutubeVideoView: UIViewRepresentable {
     func updateUIView(_ uiView: WKWebView, context: Context) {
         
         let path = "https://www.youtube.com/embed/4aZr5hZXP_s"
-        guard let url = URL(string: path) else { return }
+        guard let url = URL(string: self.url) else { return }
         
         uiView.scrollView.isScrollEnabled = false
         uiView.load(.init(url: url))

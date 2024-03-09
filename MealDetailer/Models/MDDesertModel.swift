@@ -33,6 +33,7 @@ struct MDDynamicMealDetailSanitized {
         case strIngredient = "strIngredient"
         case strMeasure = "strMeasure"
         case strMealName = "strMeal"
+        case strMealThumb = "strMealThumb"
     }
     var meals : [String:String]?
     var ingredients : [String:String]?
