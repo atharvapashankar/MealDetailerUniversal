@@ -11,10 +11,12 @@ struct MDHomeView: View {
     @ObservedObject var mdScrollView : MDScrollView
     @StateObject var mdControlCenterManager = MDControlCenterManager.shared
     var body: some View {
-        if mdControlCenterManager.listSwitch {
-            MDMealListRowView(mdScrollView: mdScrollView)
-        } else {
-            MDMealListCardView(mdScrollView: mdScrollView)
+        VStack{
+            if mdControlCenterManager.listSwitch {
+                MDMealListRowView(mdScrollView: mdScrollView)
+            } else {
+                MDMealListCardView(mdScrollView: mdScrollView)
+            }
         }
     }
 }

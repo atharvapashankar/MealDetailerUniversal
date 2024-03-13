@@ -11,6 +11,8 @@ class MDMealDetailViewModel : ObservableObject {
     
     @Published var mealDetail : [MDDynamicMealDetailSanitized] = []
     @Published var isLoaded : Bool = false
+    var mealDetailsPresent : [Int : [MDDynamicMealDetailSanitized.codingKeys:String]] = [:]
+    var mealIngredients : [String : String] = [:]
     
     init(mealId : String) {
         requestMealDetails(for: mealId)
@@ -22,23 +24,14 @@ class MDMealDetailViewModel : ObservableObject {
             case .success(let meal) :
                 self.mealDetail = [meal]
                 self.isLoaded = true
+                if let mealDetailPresent = meal.detailsPresent, let mealIgredients = meal.ingredients {
+                    self.mealDetailsPresent = mealDetailPresent
+                    self.mealIngredients = mealIgredients
+                }
             case .failure(let error) :
+                NSLog(error.localizedDescription)
                 break;
             }
         })
-    }
-    
-    func getMealName(for type : MDDynamicMealDetailSanitized.codingKeys) -> String? {
-        guard let mealsModel = mealDetail.first, let meal = mealsModel.meals else { return nil }
-        return meal[type.rawValue]
-    }
-    
-    func getYoutubeLink() -> String? {
-        guard let mealsModel = mealDetail.first, let meal = mealsModel.meals else { return nil }
-        guard let youtubeLink = meal[MDDynamicMealDetailSanitized.codingKeys.youtube.rawValue] else {return nil}
-        let youtubeTrimLink = "https://www.youtube.com/watch?v="
-        let trim = "embed/"
-        
-        return youtubeLink.replacingOccurrences(of: "watch?v=", with: "embed/")
     }
 }

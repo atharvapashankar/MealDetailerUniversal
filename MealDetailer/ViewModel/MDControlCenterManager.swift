@@ -10,12 +10,10 @@ import Foundation
 class MDControlCenterManager : ObservableObject {
     
     public enum switchType : String, CaseIterable {
-        case navigationSwitch = "Navigation Switch"
         case listSwitch = "List Switch"
         case horizontalCardScrollSwitch = "Horiontal scrolling of Card View"
     }
-    
-    @Published var navigationSwitch : Bool = false
+
     @Published var listSwitch : Bool = false
     @Published var horizontalCardScrollSwitch : Bool = false
     
@@ -23,17 +21,18 @@ class MDControlCenterManager : ObservableObject {
     
     private init() { }
     
-    func setFeatureFlagValue(for type : switchType, value : Bool) {
+    func setOrGetFeatureFlagValue(for type : switchType, value : Bool? = nil) -> Bool? {
         switch type {
         case .horizontalCardScrollSwitch :
-            horizontalCardScrollSwitch = value
-            return
+            if let value = value {
+                horizontalCardScrollSwitch = value
+            }
+            return horizontalCardScrollSwitch
         case .listSwitch :
-            listSwitch = value
-            return
-        case .navigationSwitch :
-            navigationSwitch = value
-            return
+            if let value = value {
+                listSwitch = value
+            }
+            return listSwitch
         }
     }
 }

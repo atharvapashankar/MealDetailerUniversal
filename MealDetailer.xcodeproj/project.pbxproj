@@ -17,7 +17,7 @@
 		2F03EAB62B91C56F00B42092 /* MDDesertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F03EAB52B91C56F00B42092 /* MDDesertModel.swift */; };
 		2F35E9792B940863001EF0E8 /* MDEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9782B940863001EF0E8 /* MDEngine.swift */; };
 		2F35E97B2B948E4D001EF0E8 /* MDScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E97A2B948E4D001EF0E8 /* MDScrollView.swift */; };
-		2F35E9832B95C3FE001EF0E8 /* MealListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9822B95C3FE001EF0E8 /* MealListView.swift */; };
+		2F35E9832B95C3FE001EF0E8 /* MDMealDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9822B95C3FE001EF0E8 /* MDMealDetailView.swift */; };
 		2F35E9852B95C982001EF0E8 /* MDMealListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9842B95C982001EF0E8 /* MDMealListRowView.swift */; };
 		2F35E98B2B999800001EF0E8 /* MDUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E98A2B999800001EF0E8 /* MDUtilities.swift */; };
 		2F35E98E2B99988E001EF0E8 /* MDResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E98D2B99988E001EF0E8 /* MDResponseParser.swift */; };
@@ -26,6 +26,7 @@
 		2F35E9962B9C4E62001EF0E8 /* MDSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9952B9C4E62001EF0E8 /* MDSettingsView.swift */; };
 		2F35E9982B9C598F001EF0E8 /* MDControlCenterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9972B9C598F001EF0E8 /* MDControlCenterManager.swift */; };
 		2F35E99A2B9C6304001EF0E8 /* MDMealListCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E9992B9C6304001EF0E8 /* MDMealListCardView.swift */; };
+		2F35E99C2B9E937C001EF0E8 /* MDImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F35E99B2B9E937C001EF0E8 /* MDImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +60,7 @@
 		2F03EAB52B91C56F00B42092 /* MDDesertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDDesertModel.swift; sourceTree = "<group>"; };
 		2F35E9782B940863001EF0E8 /* MDEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDEngine.swift; sourceTree = "<group>"; };
 		2F35E97A2B948E4D001EF0E8 /* MDScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDScrollView.swift; sourceTree = "<group>"; };
-		2F35E9822B95C3FE001EF0E8 /* MealListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealListView.swift; sourceTree = "<group>"; };
+		2F35E9822B95C3FE001EF0E8 /* MDMealDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMealDetailView.swift; sourceTree = "<group>"; };
 		2F35E9842B95C982001EF0E8 /* MDMealListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMealListRowView.swift; sourceTree = "<group>"; };
 		2F35E98A2B999800001EF0E8 /* MDUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDUtilities.swift; sourceTree = "<group>"; };
 		2F35E98D2B99988E001EF0E8 /* MDResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDResponseParser.swift; sourceTree = "<group>"; };
@@ -68,6 +69,7 @@
 		2F35E9952B9C4E62001EF0E8 /* MDSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDSettingsView.swift; sourceTree = "<group>"; };
 		2F35E9972B9C598F001EF0E8 /* MDControlCenterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDControlCenterManager.swift; sourceTree = "<group>"; };
 		2F35E9992B9C6304001EF0E8 /* MDMealListCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDMealListCardView.swift; sourceTree = "<group>"; };
+		2F35E99B2B9E937C001EF0E8 /* MDImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MDImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,11 +187,12 @@
 			isa = PBXGroup;
 			children = (
 				2F03EA8D2B91C02500B42092 /* ContentView.swift */,
-				2F35E9822B95C3FE001EF0E8 /* MealListView.swift */,
+				2F35E9822B95C3FE001EF0E8 /* MDMealDetailView.swift */,
 				2F35E9842B95C982001EF0E8 /* MDMealListRowView.swift */,
 				2F35E9912B9C4AC2001EF0E8 /* MDHomeView.swift */,
 				2F35E9952B9C4E62001EF0E8 /* MDSettingsView.swift */,
 				2F35E9992B9C6304001EF0E8 /* MDMealListCardView.swift */,
+				2F35E99B2B9E937C001EF0E8 /* MDImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F35E99C2B9E937C001EF0E8 /* MDImageView.swift in Sources */,
 				2F35E9962B9C4E62001EF0E8 /* MDSettingsView.swift in Sources */,
 				2F35E9982B9C598F001EF0E8 /* MDControlCenterManager.swift in Sources */,
 				2F35E9792B940863001EF0E8 /* MDEngine.swift in Sources */,
@@ -346,7 +350,7 @@
 				2F35E98B2B999800001EF0E8 /* MDUtilities.swift in Sources */,
 				2F03EA8C2B91C02500B42092 /* MealDetailerApp.swift in Sources */,
 				2F35E99A2B9C6304001EF0E8 /* MDMealListCardView.swift in Sources */,
-				2F35E9832B95C3FE001EF0E8 /* MealListView.swift in Sources */,
+				2F35E9832B95C3FE001EF0E8 /* MDMealDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,7 +519,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -545,7 +549,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -24,6 +24,7 @@ class MDScrollView : ObservableObject {
             case .success(let meal) :
                 self.mealList = meal
             case .failure(let error) :
+                NSLog(error.localizedDescription)
                 break;
             }
         })

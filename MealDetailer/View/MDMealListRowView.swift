@@ -13,14 +13,19 @@ struct MDMealListRowView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
-            NavigationView{
+            NavigationView {
                 List(mdScrollView.mealList, id: \.id) { meal in
-                    NavigationLink(destination: MealListView(mdMealDetailViewModel: MDMealDetailViewModel.init(mealId: meal.idMeal)), label: {
+                    NavigationLink(destination: MDMealDetailView(mdMealDetailViewModel: MDMealDetailViewModel.init(mealId: meal.idMeal)), label: {
                         MDMealRowCard(meal: meal)
                     })
-                }.navigationTitle("Menu")
+                    .listRowSeparator(.hidden, edges: .all)
+                    .listRowBackground(MDUtilities.gradientUniversalColor .ignoresSafeArea())
+                }
+                .navigationTitle("Menu")
             }
         }
+        .foregroundColor(MDUtilities.universalColor())
+        .background(MDUtilities.gradientUniversalColor)
     }
     
 }
@@ -30,42 +35,20 @@ struct MDMealRowCard : View {
     
     var body: some View {
         HStack {
-            mealImage
-            mealDetails
-        }
-        .cornerRadius(8)
-    }
-    
-    private var mealImage: some View {
-        AsyncImage(url: URL(string: meal.strMealThumb)) { phase in
-            switch phase {
-            case .success(let image):
-                image.resizable().aspectRatio(contentMode: .fill)
-            case .failure:
-                Image(systemName: "photo")
-            case .empty:
-                ProgressView()
-            @unknown default:
-                EmptyView()
-            }
-        }
-        .frame(width: 80, height: 80).cornerRadius(8)
-    }
-    
-    private var mealDetails: some View {
-        VStack(alignment: .leading) {
-            Text(meal.strMeal)
-                .font(.headline)
-            HStack {
-                Image(systemName: "doc.circle")
-                    .foregroundColor(.teal).shadow(radius: 0.2)
-                Text(meal.idMeal)
+            MDImageView(imageUrl: meal.strMealThumb, frame: CGSize(width: 80, height: 80), frameAlignment: .center, contentMode: .fill)
+                .cornerRadius(8)
+            VStack(alignment: .leading) {
+                Text(meal.strMeal)
+                    .font(.headline)
+                    .padding(5)
+                
+                Label(meal.idMeal, systemImage: "tag")
                     .font(.caption)
                     .padding(5)
-                    .background(Color.teal.opacity(0.2))
-                    .cornerRadius(5).shadow(radius: 0.2)
-            }
+            }.background(.clear)
         }
+        .background(.clear)
+        .foregroundColor(MDUtilities.universalColor())
     }
 }
 
