@@ -14,13 +14,9 @@ struct MDSettingsView: View {
             NavigationView{
                 Form {
                     // TODO: Try to iterate thru enum this will save bunch of code
-//                    ForEach(MDControlCenterManager.switchType.allCases, id: \.rawValue) { type in
-//                        MDFeatureFlag(featureFlagType: type, initialValue: MDControlCenterManager.shared.listSwitch)
-//                    }
-                    
-                    MDFeatureFlag(featureFlagType: .listSwitch, initialValue: MDControlCenterManager.shared.listSwitch)
-                    MDFeatureFlag(featureFlagType: .horizontalCardScrollSwitch, initialValue: MDControlCenterManager.shared.horizontalCardScrollSwitch)
-                    
+                    ForEach(MDControlCenterManager.switchType.allCases, id: \.rawValue) { type in
+                        MDFeatureFlag(featureFlagType: type, initialValue: MDControlCenterManager.shared.setOrGetFeatureFlagValue(for: type) ?? false)
+                    }
                 }.navigationTitle("Feature Flag")
             }
         }
@@ -35,11 +31,12 @@ struct MDFeatureFlag: View {
     
     var featureFlagType : MDControlCenterManager.switchType
     @State var initialValue : Bool
+    @StateObject var mdControlCenterManager = MDControlCenterManager.shared
     
     var body: some View {
         HStack{
             Toggle(featureFlagType.rawValue, isOn: $initialValue).onChange(of: initialValue) { value in
-                MDControlCenterManager.shared.setFeatureFlagValue(for: featureFlagType, value: value)
+                 let nothing = MDControlCenterManager.shared.setOrGetFeatureFlagValue(for: featureFlagType, value: value)
             }
         }
     }

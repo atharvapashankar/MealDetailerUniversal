@@ -42,7 +42,6 @@ class MDEngine {
                 completion(.failure(NSError(domain: "Meals not fetched", code: -1)))
             }
         })
-        //startRequestForMealList(forURL: urlString, completion: completion)
     }
     
     func reqeustDataForMealDetail(for desertId : String, completion: @escaping (Result<MDDynamicMealDetailSanitized, Error>) -> ()) {
@@ -61,7 +60,6 @@ class MDEngine {
                 completion(.failure(NSError(domain: "Meals not fetched", code: -1)))
             }
         })
-        //startRequestForMealDetail(forURL: urlString, completion: completion)
         return
     }
 }
@@ -78,39 +76,3 @@ func fetch(for url : URL, completion: @escaping (Result<Data, Error>) -> ()) {
         }
     }.resume()
 }
-
-//func startRequestForMealList(forURL url : URL, completion: @escaping (Result<[Meal], Error>) -> ()) {
-//    URLSession.shared.dataTask(with: url) { data, response, error in
-//        DispatchQueue.main.async {
-//            
-//            if let data = data {
-//
-//                guard let decodedData = MDResponseParser().decodeDataForMealList(for: data) else { return }
-//                
-//                let meal = decodedData.meals
-//                completion(.success(decodedData.meals))
-//            } else if let error = error {
-//                print("HTTP Request Failed \(error)")
-//                completion(.failure(NSError(domain: "Meals not fetched", code: -1)))
-//            }
-//        }
-//    }.resume()
-//}
-//func startRequestForMealDetail(forURL url : URL, completion: @escaping (Result<MDDynamicMealDetailSanitized, Error>) -> ()) {
-//    URLSession.shared.dataTask(with: url) { data, response, error in
-//        DispatchQueue.main.async {
-//            
-//            if let data = data {
-//                guard let decodedData = MDResponseParser().decodeDataForMealDetail(for: data) else { return }
-//                guard let sanitizedData = MDResponseParser().sanitizeResponse(for: decodedData) else { return }
-//                completion(.success(sanitizedData))
-//            } else if let error = error {
-//                print("HTTP Request Failed \(error)")
-//                completion(.failure(NSError(domain: "Meals not fetched", code: -1)))
-//            }
-//        }
-//    }.resume()
-//}
-
-
-

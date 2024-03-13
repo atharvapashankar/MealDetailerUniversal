@@ -14,6 +14,7 @@ class MDResponseParser {
         guard let mealMenuData = try? decoder.decode(MealsResponse.self, from: data) else { return nil}
         return mealMenuData
     }
+    
     func decodeDataForMealDetail(for data : Data) -> MDDynamicMealDetail? {
         
         let decoder = JSONDecoder()

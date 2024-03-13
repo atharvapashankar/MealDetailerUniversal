@@ -6,11 +6,25 @@
 //
 
 import Foundation
+import SwiftUI
 
 class MDUtilities {
     
     struct Constants {
-        let youtubeTrimLink = "https://www.youtube.com/watch?v="
+        static let youtubeWatchLink = "watch?v="
+        static let youtubeEmbedLink = "embed/"
+        static let youtubeVideoLabel = "Youtube Video"
+    }
+    
+    static let gradientUniversalColor = gradientUniversalColor()
+        
+    static func gradientUniversalColor(startPoint : UnitPoint? = nil, endPoint : UnitPoint? = nil) -> LinearGradient {
+        return LinearGradient(gradient: Gradient(colors: [Color("customGradientColor", bundle: Bundle.main), Color("customGradientColor1", bundle: Bundle.main)]), startPoint: startPoint ?? .bottomLeading, endPoint: endPoint ?? .topTrailing)
+    }
+    
+    
+    static func universalColor() -> Color {
+        return Color("fontColor", bundle: Bundle.main)
     }
 }
 
@@ -22,3 +36,5 @@ extension String {
         return self.range(of: find, options: .caseInsensitive) != nil
     }
 }
+
+

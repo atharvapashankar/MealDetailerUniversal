@@ -18,13 +18,13 @@ struct ContentView: View {
             MDHomeView(mdScrollView: mdScrollView)
                 .tabItem { Label(
                     title: { Text("Deserts") },
-                    icon: { /*@START_MENU_TOKEN@*/Image(systemName: "42.circle")/*@END_MENU_TOKEN@*/ }
+                    icon: { Image(systemName: "staroflife") }
                 ) }
             
             MDSettingsView()
                 .tabItem { Label(
                     title: { Text("Settings") },
-                    icon: { /*@START_MENU_TOKEN@*/Image(systemName: "42.circle")/*@END_MENU_TOKEN@*/ }
+                    icon: { Image(systemName: "slider.horizontal.3") }
                 ) }
         }
     }
