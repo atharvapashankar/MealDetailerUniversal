@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MDMealListCardView: View {
     
-    @ObservedObject var mdScrollView : MDScrollView
+    @ObservedObject var mdScrollView : MDMealDataModel
     @StateObject var mdControlCenterManager = MDControlCenterManager.shared
     
     var body: some View {
@@ -47,7 +47,7 @@ struct MDMealListCardView: View {
 }
 
 #Preview {
-    MDMealListCardView(mdScrollView: MDScrollView())
+    MDMealListCardView(mdScrollView: MDMealDataModel())
 }
 
 struct MDMealCard: View {

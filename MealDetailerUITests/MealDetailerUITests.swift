@@ -25,8 +25,9 @@ class MealDetailerUITests: XCTestCase {
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        app.launchArguments = ["-ui-testing"]
+        app.launchEnvironment = ["-networking-success":"1"]
         app.launch()
-
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
@@ -38,5 +39,12 @@ class MealDetailerUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+    
+    func testMealListView() {
+        let app = XCUIApplication()
+        app.launch()
+        let menu = app.navigationBars["Menu"]
+        XCTAssertTrue(menu.exists)
     }
 }

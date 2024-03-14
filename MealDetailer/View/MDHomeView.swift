@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MDHomeView: View {
-    @ObservedObject var mdScrollView : MDScrollView
+    @ObservedObject var mdScrollView : MDMealDataModel
     @StateObject var mdControlCenterManager = MDControlCenterManager.shared
     var body: some View {
         VStack{
@@ -22,5 +22,5 @@ struct MDHomeView: View {
 }
 
 #Preview {
-    MDHomeView(mdScrollView: MDScrollView())
+    MDHomeView(mdScrollView: MDMealDataModel())
 }
