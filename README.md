@@ -1,4 +1,7 @@
+## Meal Detailer app
 
+App is dynamic.
+Whatever the response is according to that view is adjusted automatically.
 
 https://github.com/atharvapashankar/MealDetailerUniversal/assets/61183678/591cec04-8f6f-4850-8cb7-ac56f17beace
 
