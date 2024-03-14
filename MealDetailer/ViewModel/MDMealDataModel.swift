@@ -1,5 +1,5 @@
 //
-//  MDScrollView.swift
+//  MDMealDataModel.swift
 //  MealDetailer
 //
 //  Created by Atharva Pashankar on 3/3/24.
@@ -8,10 +8,10 @@
 import Foundation
 
 
-
-class MDScrollView : ObservableObject {
+class MDMealDataModel : ObservableObject {
     
     @Published var mealList : [Meal] = []
+    var isLoaded : Bool = false
     
     init() {
         self.requestData()
@@ -23,6 +23,7 @@ class MDScrollView : ObservableObject {
             switch result {
             case .success(let meal) :
                 self.mealList = meal
+                self.isLoaded = true
             case .failure(let error) :
                 NSLog(error.localizedDescription)
                 break;

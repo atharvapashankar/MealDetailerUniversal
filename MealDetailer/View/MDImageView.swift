@@ -15,6 +15,8 @@ struct MDImageView : View {
     var shadowColor : Color?
     var shadowRadius : CGFloat?
     var contentMode : ContentMode
+    var maxHeight : CGFloat? = nil
+    var maxWidth : CGFloat? = nil
     
     var body: some View {
         if let imageUrl = URL(string: imageUrl) {
@@ -23,6 +25,7 @@ struct MDImageView : View {
                     .resizable()
                     .aspectRatio(contentMode: contentMode)
                     .frame(width: frame.width, height: frame.height, alignment: .top)
+                    
             } placeholder: {
                 Image(systemName: "photo")
                     .resizable()

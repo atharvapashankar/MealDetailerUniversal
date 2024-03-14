@@ -9,6 +9,29 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>MealDetailerTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>2F03EA872B91C02500B42092</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F03EA972B91C02800B42092</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F03EAA12B91C02900B42092</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 	</dict>
 </dict>
 </plist>

@@ -11,7 +11,7 @@ import SwiftUI
 struct MealDetailerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(mdScrollView: MDScrollView())
+            ContentView(mdScrollView: MDMealDataModel())
         }
     }
 }

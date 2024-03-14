@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MDMealListRowView: View {
     
-    @ObservedObject var mdScrollView : MDScrollView
+    @ObservedObject var mdScrollView : MDMealDataModel
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -53,5 +53,5 @@ struct MDMealRowCard : View {
 }
 
 #Preview {
-    MDMealListRowView(mdScrollView: MDScrollView())
+    MDMealListRowView(mdScrollView: MDMealDataModel())
 }
